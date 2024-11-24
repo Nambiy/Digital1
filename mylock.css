@@ -1,0 +1,47 @@
+
+/* body{
+    background-color:;
+
+} */
+.smart{
+    height: 600px;
+    width: 400px;
+    border: 10px solid rgb(250, 10, 10);
+    margin-left: 500px;
+    border-radius: 20%;
+    box-shadow: 2px 2px rgb(243, 9, 9);
+    background-color: rgba(18, 18, 17, 0.57);
+}
+.digital{
+    color: rgb(243, 9, 9);
+    margin-left:140px;
+    font-size: 20px;
+}
+.name{
+    color: rgb(10, 243, 68);
+}
+.symbol{
+color: blue;
+margin-left:130px;
+margin-top: -20px;
+}
+#lock{
+    color: rgb(205, 240, 7);
+    font-size: 30px;
+    margin-left:190px; 
+}
+#display{
+    height: 30px;
+    width:150px;
+    border: 2px solid, white;
+    color: white;
+    margin-top: -20px;
+}
+.keys button{
+     display:inline-flex;
+     font-size: 80px;
+     margin-left: 20px;
+     margin-top: 20px;
+     color:rgba(0, 0, 0, 0.89);
+     border-radius: 10px;
+}

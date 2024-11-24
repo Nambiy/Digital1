@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital lock</title>
+    <link rel="stylesheet" href="/mylock/mylock.css">
+</head>
+<body>
+   <div class="smart">
+        <h1 class="digital">Digital Lock</h1>
+        <h1 class="name"><marquee behavior="" direction="right">NELLURI NIWAS</marquee></h1>
+        <h1 class="symbol">$RIRAM</h1>
+  <div id="lock">🔒 Locked</div>
+  <div id="display"></div>
+  <div class="keys">
+      <button onclick="pressKey('1')">1</button>
+      <button onclick="pressKey('2')">2</button>
+      <button onclick="pressKey('3')">3</button>
+      <button onclick="pressKey('4')">4</button>
+      <button onclick="pressKey('5')">5</button>
+      <button onclick="pressKey('6')">6</button>
+      <button onclick="pressKey('7')">7</button>
+      <button onclick="pressKey('8')">8</button>
+      <button onclick="pressKey('9')">9</button>
+      <button onclick="clearInput()">X</button>
+      <button onclick="pressKey('0')">0</button>
+      <button onclick="checkPassword()">✔</button>
+  </div>
+</div>
+</div>
+</body>
+
+  <script>
+      const correctPassword = "1234"; 
+      let userInput = "";
+
+      function pressKey(key) {
+          if (userInput.length < correctPassword.length) {
+              userInput += key;
+              updateDisplay();
+          }
+      }
+
+      function clearInput() {
+          userInput = "";
+          updateDisplay();
+      }
+
+      function checkPassword() {
+          if (userInput === correctPassword) {
+              document.getElementById("lock").textContent = "🔓 Unlocked";
+              document.getElementById("lock").style.color = "green";
+          } else {
+              alert("Incorrect Password!");
+              clearInput();
+          }
+      }
+
+      function updateDisplay() {
+          document.getElementById("display").textContent = userInput.replace(/./g, "*");
+      }
+  </script></body>
+</html>
